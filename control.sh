@@ -8,8 +8,7 @@ nombrevm="W10";
 while true; do
 estado=$(qm list | grep "$numerovm")
 if [[ "$estado" = *"$numerovm"*"$nombrevm"*"running"* ]]; then
-#echo "ok $estado"
-echo " "
+echo "ok $estado"
 else
 fecha=$(date)
 echo "$fecha Se detecta VM $numerovm $nombrevm apagada" >> /root/control/log.txt
